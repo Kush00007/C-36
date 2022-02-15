@@ -14,13 +14,14 @@ class Form {
   setElementStyle(){
     this.input.class("customInput")
     this.playButton.class("customButton")
-    this.titleImg.class("gmaeTittle")
+    this.titleImg.class("gameTitle")
     this.greeting.class("greeting")
   }
   hide() {
     this.greeting.hide();
     this.playButton.hide();
     this.input.hide();
+    this.titleImg.hide();
   }
  display()
  {
@@ -39,6 +40,7 @@ class Form {
    player.index = mypc
    player.addplayer()
    player.updatepc(mypc)
+   player.getDistance()
    })
  }
 }

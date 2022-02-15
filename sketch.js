@@ -2,13 +2,13 @@ var canvas;
 var backgroundImage;
 var bgImg;
 var database;
-var form, player;
-var playerCount;
-var mygs
-var mypc
+var form, player,game;
+var mygs=0;
+var mypc=0;
 var car1img,car2img,trackimg
 var allplayers=[]
-var car1,car2,cars
+var car1,car2
+var cars = []
 
 function preload() {
   backgroundImage = loadImage("/assets/background.png");
@@ -21,6 +21,7 @@ function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
   database = firebase.database();
   game = new Game();
+  game.readgs();
   game.start();
 
 }
